@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     productList.append(productCard);
   });
 
-  // 2. reference the <div> element of id: productModal and its elements to update the modal's data
+  // 2. Reference the <div> element of id: productModal and its elements to update the modal's data
   const productModal = document.getElementById("productModal");
   const productModalTitle = document.getElementById("productModalTitle");
   const productModalImage = document.getElementById("productModalImage");
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         spinnerDesc.displaySpinner(false);
   });
 
-  // Show everything after the modal even finishes sliding in
+  // Show everything after the modal finished sliding in
   productModal.addEventListener("shown.bs.modal", async () => {
     productModalImage.src =
       "https://placehold.co/100x100/CCCCCC/FFFFFF?text=Loading Image...";
@@ -100,7 +100,7 @@ function createCard(item) {
   button.setAttribute("data-bs-target", "#productModal");
   button.textContent = "Details";
 
-  // 6.1. Add an eventlistener to button
+  // 6.1. Add an eventlistener to button to update the URL for the modal to pick up the product details
   button.addEventListener("click", (event) => {
     event.preventDefault();
 
